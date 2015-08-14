@@ -18,4 +18,9 @@ class Definition
   define_singleton_method(:all) do
     @@definitions
   end
+
+  define_singleton_method(:find) do |id|
+    @@definitions[id - 1]
+  end
+
 end
