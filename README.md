@@ -1,6 +1,6 @@
 # _Personal Dictionary: Definition Dojo_
 
-##### _Allows user to store add words and add multiple definitions to those words, August 14, 2015_
+##### _Allows user to add and store words along with their multiple definitions, August 14, 2015_
 
 #### By _**Josue Valverde**_
 
