@@ -2,11 +2,16 @@
 
   <h2>Your Words, Kyu</h2>
 
-  <ul class="list-inline">
+  <table class="table">
+    <% @count = 1 %>
     <% @word.each() do |word| %>
-    <li><a href="/words/<%= word.id()%>/definitions"><%= word.word() %></a></li>
+      <% if @count % 5 == 0%><tr><% end %>
+        <td><a href="/words/<%= word.id()%>/definitions"><%= word.word() %></a></td>
+      <% if (@count + 1) % 5 == 0%></tr><% end %>
+      <% @count += 1 %>
     <% end %>
-  </ul>
+  </table>
+
 
   <a href="/words/new" class="btn btn-primary btn-lg active" role="button">Add a Word</a>
   <a href="/words" class="btn btn-default btn-lg active" role="button">View Words</a>
