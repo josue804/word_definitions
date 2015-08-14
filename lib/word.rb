@@ -8,4 +8,8 @@ class Word
     @id = @@words.length - 1
   end
 
+  define_method(:save) do
+    @@words.push(self)
+  end
+
 end
