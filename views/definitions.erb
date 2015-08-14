@@ -1,11 +1,17 @@
 <div class="container">
   <h2><%= @word.word() %></h2>
 
-  <ul class="list-inline">
+  <table class="table table-striped">
+    <% @count = 1 %>
     <% @word.definitions().each() do |definition| %>
-    <li><%= definition.definition() %></li>
+      <tr>
+        <td><%= @count %>: <%= definition.definition() %></td>
+      </tr>
+      <% @count +=1 %>
     <% end %>
-  </ul>
+  </table>
+
+
 
   <a href="/words/<%= @word.id() %>/definitions/new" class="btn btn-primary btn-lg active" role="button">Add a Definition</a>
   <a href="/words" class="btn btn-default btn-lg active" role="button">View Words</a>
