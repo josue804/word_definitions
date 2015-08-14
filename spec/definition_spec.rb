@@ -9,4 +9,14 @@ describe(Definition) do
       expect(test_definition.definition()).to(eq("An organism capable of converting caffeine into code."))
     end
   end
+
+  describe('#save') do
+    it('saves a Definition object onto the Definition class definition array') do
+      test_definition = Definition.new(:definition => "a small woodland creature that jumps as high as it wants.")
+      expect(test_definition.save()).to(eq([test_definition]))
+    end
+  end
+
+
+
 end
