@@ -1,0 +1,13 @@
+.navbar {
+  background-color: #FF4E50;
+  border-color: #E54648;
+}
+
+.navbar-default .navbar-brand {
+  font-weight: bold;
+  color: white;
+}
+
+.navbar-default .navbar-brand:hover {
+  color: #FCECEC;
+}
