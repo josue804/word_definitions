@@ -1,13 +1,27 @@
 .navbar {
-  background-color: #FF4E50;
-  border-color: #E54648;
+  background-color: #333333;
+  border-color: #222222;
+  height: 75px;
 }
 
 .navbar-default .navbar-brand {
   font-weight: bold;
   color: white;
+  font-size: 2em;
+  margin-top: 10px;
 }
 
 .navbar-default .navbar-brand:hover {
   color: #FCECEC;
+}
+
+.btn-primary.active {
+  background-color: #FF4E50;
+  border-color: #E54648;
+  color: white;
+}
+
+.btn-primary.active:hover {
+  background-color: #ff5f61;
+  border-color: #ff7172;
 }
