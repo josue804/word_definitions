@@ -33,3 +33,12 @@
 a {
   font-size: 20px;
 }
+
+mark {
+  color: #337ab7;
+  background: rgba(255,78,80,.2)
+}
+
+mark:hover {
+  color: #23527c;
+}
