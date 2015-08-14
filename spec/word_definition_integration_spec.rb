@@ -25,6 +25,7 @@ describe('the word and definitions process', {:type => :feature}) do
   it("clicks on a word and displays its definitions, along with the options to add more") do
     visit('/words/new')
     fill_in('word', :with => "mahogany")
+    click_button('Add')
     click_link('Mahogany')
     expect(page).to have_content("Mahogany")
   end
