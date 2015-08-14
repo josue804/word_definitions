@@ -18,6 +18,7 @@ get('/words') do
 end
 
 post('/words') do
+  @id = params.fetch('id')
   @new_word = params.fetch('word')
   @word = Word.new({:word => @new_word})
   @word.save()
