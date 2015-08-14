@@ -2,6 +2,11 @@ require('rspec')
 require('word')
 
 describe(Word) do
+
+  before() do
+    Word.clear()
+  end
+
   describe('#word') do
     it('returns the word, capitalized') do
       test_word = Word.new({:word => "pineapple"})
@@ -26,6 +31,16 @@ describe(Word) do
       test_word = Word.new({:word => "capybara"})
       test_word.save()
       expect(Word.clear()).to(eq([]))
+    end
+  end
+
+  describe('.find') do
+    it('finds a word based on its id number') do
+      test_word = Word.new({:word => "juice"})
+      test_word2 = Word.new({:word => "carrot"})
+      test_word.save()
+      test_word2.save()
+      expect(Word.find(test_word.id())).to(eq(test_word))
     end
   end
 
