@@ -42,3 +42,12 @@ mark {
 mark:hover {
   color: #23527c;
 }
+
+.jv-background {
+  background: url(/dojo.jpg) no-repeat center center fixed;
+  background: rgb(0, 0 ,0, .2);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
