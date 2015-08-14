@@ -29,6 +29,16 @@ describe(Definition) do
     end
   end
 
+  describe('.find') do
+    it('finds a definition based on fed in definition id') do
+      test_definition = Definition.new({:definition => "used to defeat scissors in a game."})
+      test_definition.save()
+      test_definition2 = Definition.new({:definition => "the best food ever made."})
+      test_definition2.save()
+      expect(Definition.find(test_definition2.id())).to(eq(test_definition2))
+    end
+  end
+
   describe('.all') do
     it('returns the Definition class array of all definitions') do
       test_definition = Definition.new({:definition => "the evil arch-nemesis of the enraged teen, who feels the need to strike inanimate objects"})
