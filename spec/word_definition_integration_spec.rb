@@ -12,6 +12,13 @@ describe('the word and definitions process', {:type => :feature}) do
   it("displays input page correctly") do
     visit('/')
     click_link('Add a Word')
-    expect(page). to have_content("Word")
+    expect(page).to have_content("Word")
+  end
+
+  it("displays a newly input word in /words word list") do
+    visit('/words/new')
+    fill_in('word', :with => "Yoyo")
+    click_button('Add')
+    expect(page).to have_content("Yoyo")
   end
 end
