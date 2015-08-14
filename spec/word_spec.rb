@@ -44,5 +44,17 @@ describe(Word) do
     end
   end
 
+  describe('.all') do
+    it('returns all the words in the Word class word array') do
+      test_word = Word.new({:word => "bunny"})
+      test_word2 = Word.new({:word => "grassland"})
+      test_word3 = Word.new({:word => "owl"})
+      test_word.save()
+      test_word2.save()
+      test_word3.save()
+      expect(Word.all()).to(eq([test_word, test_word2, test_word3]))
+    end
+  end
+
 
 end

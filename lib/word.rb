@@ -20,4 +20,8 @@ class Word
     @@words[id - 1]
   end
 
+  define_singleton_method(:all) do
+    @@words
+  end
+
 end
