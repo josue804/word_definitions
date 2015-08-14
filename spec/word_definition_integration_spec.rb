@@ -8,4 +8,10 @@ describe('the word and definitions process', {:type => :feature}) do
     visit('/')
     expect(page).to have_content("Definition Dojo")
   end
+
+  it("displays input page correctly") do
+    visit('/')
+    click_link('Add a Word')
+    expect(page). to have_content("Word")
+  end
 end
