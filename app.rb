@@ -8,11 +8,17 @@ get('/') do
   erb(:index)
 end
 
+get('/words/new') do
+  erb(:words_form)
+end
+
 get('/words') do
   @words = Word.all()
   erb(:words)
 end
 
-get('/words/new') do
-  erb(:words_form)
+post('/words') do
+  @new_word = params.fetch('word')
+  @words = Word.new({:word => @new_word})
+  erb(:words)
 end
