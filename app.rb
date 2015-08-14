@@ -41,4 +41,5 @@ post('/words/:id/definitions') do
   @new_definition = params.fetch('definition')
   @word = Word.find(params.fetch('id').to_i())
   @word.save_definition(@new_definition)
+  erb(:definitions)
 end
