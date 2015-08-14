@@ -1,7 +1,7 @@
 <div class="container">
 
   <h2><%= @word.word() %></h2>
-  <form class="form-horizontal" action="/words" method="post">
+  <form class="form-horizontal" action="/words/<%= @word.id() %>/definitions" method="post">
 
     <!-- <input type="hidden" name="id" value="<% Word.all().length() %>"> -->
 
