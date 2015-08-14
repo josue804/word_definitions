@@ -1,6 +1,13 @@
 <div class="container">
   <h2><%= @word.word() %></h2>
 
+  <ul class="list-inline">
+    <% @word.definitions().each() do |definition| %>
+    <li><%= definition.definition() %></li>
+    <% end %>
+  </ul>
+
   <a href="/words/<%= @word.id() %>/definitions/new" class="btn btn-primary btn-lg active" role="button">Add a Definition</a>
+  <a href="/words" class="btn btn-default btn-lg active" role="button">View Words</a>
 
 </div>
