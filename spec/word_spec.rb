@@ -19,6 +19,18 @@ describe(Word) do
     end
   end
 
+  describe('#id') do
+    it('returns the id of a word') do
+      test_word = Word.new({:word => "siyahamba"})
+      test_word.save()
+      test_word2 = Word.new({:word => "bonjour"})
+      test_word2.save()
+      test_word3 = Word.new({:word => "s'il vous plait"})
+      test_word3.save()
+      expect(test_word3.id()).to(eq(3))
+    end
+  end
+
   describe('#save') do
     it('saves a word onto the Word class array of words') do
       test_word = Word.new({:word => "purple"})
