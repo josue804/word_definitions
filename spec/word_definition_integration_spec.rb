@@ -6,6 +6,6 @@ set(:show_exceptions, false)
 describe('the word and definitions process', {:type => :feature}) do
   it("displays the index page correctly") do
     visit('/')
-    expect(page).to have_content("Vocabulary Dojo")
+    expect(page).to have_content("Definition Dojo")
   end
 end
