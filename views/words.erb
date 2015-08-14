@@ -6,10 +6,24 @@
     <% @count = 1 %>
     <% @word.sort_by!{|word| word.word().downcase()} %>
     <% @word.each() do |word| %>
-      <% if @count % 8 == 0%><tr><% end %>
-        <td><a href="/words/<%= word.id()%>/definitions"><%= word.word() %><%= @count %></a></td>
+      <% if @count % 8 == 0%>
+        <tr>
+      <% end %>
+        <td>
+          <a href="/words/<%= word.id()%>/definitions">
+            <% if word.id() == @word.length()%>
+              <mark>
+            <% end %>
+            <%= word.word() %>
+            <%if word.id() == @word.length()%>
+              </mark>
+            <% end %>
+          </a>
+        </td>
         <% @count += 1 %>
-      <% if @count % 8 == 0%></tr><% end %>
+      <% if @count % 8 == 0%>
+        </tr>
+      <% end %>
       <% @count += 1 %>
     <% end %>
   </table>
