@@ -29,4 +29,15 @@ describe('the word and definitions process', {:type => :feature}) do
     click_link('Mahogany')
     expect(page).to have_content("Mahogany")
   end
+
+  it("adds a definition to a word and makes sure that is is displayed") do
+    visit('/words/new')
+    fill_in('word', :with => "14er")
+    click_button('Add')
+    click_link('14er')
+    click_link('Add a Definition')
+    fill_in('definition', :with => "mountains that are over 14,000 feet")
+    click_button('Add')
+    expect(page).to have_content("Mountains that are over 14,000 feet")
+  end
 end
