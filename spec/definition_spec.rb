@@ -17,6 +17,12 @@ describe(Definition) do
     end
   end
 
-
+  describe('.clear') do
+    it('clears the Definition array of definitions') do
+      test_definition = Definition.new(:definition => "predatory arachnid that just wants to eat bugs and can't catch a break.")
+      test_definition.save()
+      expect(Definition.clear()).to(eq([]))
+    end
+  end
 
 end
