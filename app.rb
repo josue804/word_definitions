@@ -25,3 +25,8 @@ post('/words') do
   @word = Word.all()
   erb(:words)
 end
+
+get('/words/:id/definitions') do
+  @word = Word.find(params.fetch('id').to_i())
+  erb(:definitions)
+end
