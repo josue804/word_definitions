@@ -15,12 +15,19 @@ describe(Word) do
   end
 
   describe('#save') do
-    it('saves a word onto the Word class array') do
+    it('saves a word onto the Word class array of words') do
       test_word = Word.new({:word => "purple"})
       expect(test_word.save()).to(eq([test_word]))
     end
   end
 
+  describe('.clear') do
+    it('clears the Word class array of words') do
+      test_word = Word.new({:word => "capybara"})
+      test_word.save()
+      expect(Word.clear()).to(eq([]))
+    end
+  end
 
 
 end
