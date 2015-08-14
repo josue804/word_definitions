@@ -6,4 +6,8 @@ class Definition
     @definition = attributes.fetch(:definition).capitalize()
     @id = @@definitions.length() + 1
   end
+
+  define_method(:save) do
+    @@definitions.push(self)
+  end
 end
