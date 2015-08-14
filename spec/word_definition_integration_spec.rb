@@ -22,7 +22,7 @@ describe('the word and definitions process', {:type => :feature}) do
     expect(page).to have_content("Yoyo")
   end
 
-  it("clicks on a word and displays its definitions, along with the options to add more") dp
+  it("clicks on a word and displays its definitions, along with the options to add more") do
     visit('/words/new')
     fill_in('word', :with => "mahogany")
     click_link('Mahogany')
