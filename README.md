@@ -21,6 +21,7 @@ _This application receives a word from the user, creates a Word object out of th
 * _Bootstrap for styling_
 * _rspec and capybara for testing_
 * _Sinatra for local hosting_
+* _Heroku for deployment; ADDRESS: https://peaceful-hamlet-8565.herokuapp.com/_
 
 ### Legal
 
